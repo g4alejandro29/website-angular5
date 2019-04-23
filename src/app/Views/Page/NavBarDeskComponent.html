@@ -1,0 +1,70 @@
+<header>
+  <nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-5 col-xl-6 col-5 text-left">
+          <label class="text-nav">
+          </label>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-7 col-xl-6 col-7 text-right">
+          <a class="option" target="_blank" href="mailto:Contact@dicarsa.com.gt">
+            <label class="text-nav">
+              <i class="far fa-envelope fa-2x"></i> &nbsp;Contacto@dicarsa.com.gt
+            </label>
+          </a>
+          &nbsp;
+          <a class="option" href="tel:23627733">
+            <label class="text-nav">
+              <i class="fa fa-phone fa-2x fa-rotate-90"></i> &nbsp;+502 23627733
+            </label>
+          </a>
+          &nbsp;
+          <a class="option" target="_blank" href="https://www.facebook.com/dicarsaauto">
+            <label class="text-nav">
+              <i class="fab fa-facebook fa-2x"></i>
+            </label>
+          </a>
+          &nbsp;
+          <a class="option" target="_blank" href="https://api.whatsapp.com/send?phone=50255573014">
+            <label class="text-nav">
+              <i class="fab fa-whatsapp fa-2x"></i>
+            </label>
+          </a>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <ul class="nav">
+      <li class="logo-container">
+        &nbsp;
+        <a routerLink="/home" class="logo">
+          <img src="../../../assets/img/dicarsa-logo.png">
+        </a>
+      </li>
+      <li routerLinkActive="active-option"
+           [routerLinkActiveOptions]="{ exact: true }">
+        <a class="option" routerLink="/home">
+          Inicio
+        </a>
+      </li>
+      <li routerLinkActive="active-option"
+           [routerLinkActiveOptions]="{ exact: true }">
+        <a class="option" routerLink="/know-us">
+          Conócenos
+        </a>
+      </li>
+      <li routerLinkActive="active-option"
+          [routerLinkActiveOptions]="{ exact: true }">
+        <a class="option" routerLink="/products">
+          Productos
+        </a>
+      </li>
+      <li routerLinkActive="active-option"
+          [routerLinkActiveOptions]="{ exact: true }">
+        <a class="option" routerLink="/contact">
+          Contacto
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

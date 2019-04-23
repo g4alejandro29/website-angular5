@@ -1,0 +1,80 @@
+.container-menu {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  header {
+    width: 100%;
+    height: 95px;
+    background: #011f65;
+    box-shadow: 2px 2px 5px #999;
+    nav {
+      .logo-container {
+        width: 50%;
+        height: 95px;
+        float: left;
+        .logo {
+          width: 115px;
+          height: 50px;
+          img {
+            height: 80px;
+            position: absolute;
+            top: 18px;
+            left: 10px;
+          }
+        }
+      }
+      .bottom-container {
+        width: 50%;
+        float: right;
+        height: 95px;
+        button {
+          position: absolute;
+          right: 15px;
+          background: transparent;
+          border: 0;
+          top: 30px;
+          width: 80px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+.container-option {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 77px;
+  background: rgba(0, 0, 0, 0.49);
+  .options {
+    width: 200px;
+    background: rgb(36, 36, 36);
+    color: #fff;
+    ul {
+      padding-left: 0px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      list-style: none;
+      li {
+        padding: 7px 0 7px 40px;
+        a {
+          color: #fff;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+      li:after {
+        background-color: #0093a5!important;
+        border-left: solid 2px #0093a5;
+      }
+    }
+  }
+}
+.show-menu {
+  display: none!important;
+}
+.active-option {
+  border-left: solid 5px #0093a5;
+  background: #292929;
+}

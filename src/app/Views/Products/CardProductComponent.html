@@ -1,0 +1,12 @@
+<div class="card" (click)="getProductId()" style="border:none!important;">
+  <div class="card-img"
+       style="cursor: pointer;"
+       [ngStyle]="{
+         'background': 'url(data:image/png;base64,' + getImg() + ') center top',
+         'background-repeat':'no-repeat',
+         'background-size': 'cover'}"></div>
+  <div class="card-body" style="text-align:center;">
+    <label class="font-weight-bold">{{getTitle()}}</label>
+  </div>
+</div>
+<br>

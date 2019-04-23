@@ -1,0 +1,24 @@
+<div class="form-group row">
+  <strong class="label" *ngIf="!placeHolders">{{placeHolder}}</strong>
+  <strong *ngIf="placeHolders">&nbsp;</strong>
+  <label class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-12 col-form-label">
+  </label>
+  <div class="col-xl-10 col-lg-10 col-md-9 col-sm-9 col-12">
+    <div class="input-group">
+      <div class="input-group-prepend" *ngIf="icon && icon.length > 0">
+        <span><i [class]="icon"></i></span>
+      </div>
+      <input [type]="isType" name="firstName"
+             [style]="getStyle()"
+             [(ngModel)]="value"
+             #firstName="ngModel"
+             [placeholder]="PlaceHolders()"
+             (focus)="focus(false)"
+             (blur)="focus(true)"
+             [ngClass]="{'input-invalid': isDanger, 'input-valid': isSuccess, 'select-input': !placeHolders}"
+             (change)="updateValue($event)"
+             [required]="isRequired">
+    </div>
+    <div *ngIf="error" class="text-invalid">{{error}}</div>
+  </div>
+</div>

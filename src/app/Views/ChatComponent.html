@@ -1,0 +1,31 @@
+<!--
+<figure class="chat-icon" [ngClass]="{
+         'animated bounce': hover == true,
+         'animated bounceOutRight': chat == true,
+         'animated bounceInRight': chat == false}"
+        (mouseover)="hover=true"
+        (mouseleave)="hover=false"
+        (click)="openChat()">
+  <div>
+    <label><i class="fa fa-comment fa-flip-horizontal fa-5x"></i></label>
+  </div>
+</figure>
+<figure class="chat" *ngIf="chat == true">
+  <div class="header">
+    <div class="left text-left">Chat</div>
+    <div class="right text-right">
+      <label (click)="closeChat()">
+        <i class="far fa-times-circle"></i>
+      </label>
+    </div>
+  </div>
+  <div class="message">
+    <span></span>
+    <span></span>
+  </div>
+  <div class="form">
+    <input ngModel name="message" [(ngModel)]="message" (keypress)="setMessage($event)" placeholder="Ingrese mensaje..."
+           type="text"/>
+  </div>
+</figure>
+-->

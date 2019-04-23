@@ -1,0 +1,122 @@
+.carousel-container {
+  height: auto;
+  position: relative;
+  .carousel {
+    height: auto;
+    width: 100%;
+  }
+
+  .arrow-left {
+    top: 315px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 23px;
+    cursor: pointer;
+    i {
+      margin: 0;
+      padding:10px 13px 15px 14px;
+      font-size: 30px;
+    }
+  }
+  .arrow-left:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    transition-delay: 0.8s;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .arrow-right {
+    top: 315px;
+    position: absolute;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 23px;
+    cursor: pointer;
+    i {
+      margin: 0;
+      padding:10px 10px 15px 14px;
+      font-size: 30px;
+    }
+  }
+  .arrow-right:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    transition-delay: 0.8s;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  div {
+    position: relative;
+    ul {
+      width: 100%;
+      height: 20px;
+      text-align: center;
+      position: absolute;
+      top: -30px;
+      li {
+        display: inline-block;
+        color: white;
+        margin-right: 10px;
+        label {
+          cursor: pointer;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          background: rgba(250, 250, 250, 0.5);
+        }
+        .label-selected {
+          background: rgba(250, 250, 250, 1);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1320px) {
+  .image {
+    width: 100%;
+    max-width: 100%;
+    height: 700px;
+    background-position: bottom center!important;
+    background-size: auto 700px!important;
+  }
+}
+@media (max-width: 1319px) and (min-width: 1020px) {
+  .image {
+    width: 100%;
+    max-width: 100%;
+    height: 600px;
+    background-position: bottom center!important;
+    background-size: auto 600px!important;
+  }
+}
+@media (max-width: 1019px) and (min-width: 920px) {
+  .image {
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    background-position: bottom center!important;
+    background-size: auto 500px!important;
+  }
+}
+@media (max-width: 919px) and (min-width: 771px) {
+  .image {
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    background-position: bottom center!important;
+    background-size: auto 500px!important;
+  }
+}
+@media (max-width: 771px) {
+  .image {
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    background-position: bottom center!important;
+    background-size: auto 500px!important;
+  }
+  .carousel-container {
+    .arrow-left {
+      left: 2%;
+    }
+  }
+}

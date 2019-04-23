@@ -1,0 +1,136 @@
+<br><br><br><br class="mobil-show">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/products">Categorias</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Producto</li>
+  </ol>
+</nav>
+<div class="modal" *ngIf="modal" style="padding-top: 2rem; z-index: 11000000;overflow: auto;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-3">
+        <div class="row animated bounceInLeft" style="background: #dbdbdb">
+          <div class="col-lg-12" style="background: #3e52b3; padding-top: 10px; padding-bottom: 10px;">
+            <div class="row">
+              <div class="col-10">
+                <span class="h2" style="color: #dbdbdb">Cotizar</span>
+              </div>
+              <div class="col-2 text-right">
+                <span (click)="hiddenModal()" style="color: #dbdbdb;cursor: pointer;">
+                  <i class="far fa-times-circle fa-2x"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-11 offset-lg-1">
+            <form (ngSubmit)="onSubmit()" #customerForm="ngForm" autocomplete="off" novalidate>
+              <app-form-input
+                [label]="'Nombres'"
+                [isType]="'text'"
+                [isRequired]="true"
+                [value]="contact.firstName"
+                [placeHolder]="'Ingresar nombre'"
+                (input)="updateFirstName($event.target.value)"
+                [isDanger]="firstNameIsDanger()"
+                [error]="firstNameError"
+                [isSuccess]="firstNameIsSuccess()"></app-form-input>
+              <app-form-input
+                [label]="'Apellidos'"
+                [isType]="'text'"
+                [isRequired]="true"
+                [value]="contact.lastName"
+                [placeHolder]="'Ingresar apellido'"
+                (input)="updateLastName($event.target.value)"
+                [isDanger]="lastNameIsDanger()"
+                [error]="lastNameError"
+                [isSuccess]="lastNameIsSuccess()"></app-form-input>
+              <app-form-input
+                [label]="'Correo'"
+                [isType]="'email'"
+                [isRequired]="true"
+                [value]="contact.email"
+                [placeHolder]="'Ingresar correo electrónico'"
+                [icon]="'far fa-envelope'"
+                (input)="updateEmail($event.target.value)"
+                [isDanger]="emailIsDanger()"
+                [error]="emailError"
+                [isSuccess]="emailIsSuccess()"></app-form-input>
+              <app-form-select
+                [value]="contact.country"
+                [list]="countries"
+                (input)="updateCountry($event.target.value)"
+                placeHolder="Selecciona país"></app-form-select>
+              <app-form-select
+                [value]="contact.subdivision"
+                [list]="subdivisions"
+                (input)="updateSubdivision($event.target.value)"
+                placeHolder="Selecciona área"></app-form-select>
+              <app-form-input
+                [label]="'Teléfono'"
+                [isType]="'tel'"
+                [isRequired]="true"
+                [value]="contact.phone"
+                [placeHolder]="'Ingresar teléfono'"
+                [icon]="'fas fa-mobile-alt'"
+                (input)="updatePhone($event.target.value)"></app-form-input>
+              <app-form-textarea
+                [value]="contact.description"
+                [placeHolder]="'Ingrese descripción'"
+                (input)="updateDescription($event.target.value)"
+                [isRequired]="true"></app-form-textarea>
+              <button type="submit">Enviar</button>
+              <br/>&nbsp;<br/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 style="font-weight: bold">Productos</h2>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col-lg-6">
+            <figure *ngIf="getImg()" class="product-container-image" style="width: 90%; height: 300px; padding: 5%"
+                    [ngStyle]="{
+                'background': 'url(data:image/png;base64,' + getImg() + ') center',
+                'background-repeat':'no-repeat',
+                'background-size': 'cover'}"></figure>
+          </div>
+          <div class="col-lg-6">
+            <ul>
+              <li *ngFor="let item of products; let i = index" [ngClass]="{'active-option': productId == i}"
+                  (click)="showProduct(item, i)">
+                {{item['name'] | uppercase}}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <h3>{{title | uppercase}}</h3>
+        <br>
+        <div *ngIf="product" class="row">
+          <div class="col-lg-4">
+            <img alt="image" *ngIf="product['image']" style="width: 100%" [src]="'data:image/png;base64,' + product['image']">
+          </div>
+          <div class="col-lg-8">{{product['description']}}</div>
+            <br/>
+            <br/>
+          <div class="col-12" style="text-align:center;">
+            <br/>
+            <button type="button" (click)="showModal()">Cotizar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>

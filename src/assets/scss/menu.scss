@@ -1,0 +1,39 @@
+.menu-container {
+  position: relative;
+  width: 100%;
+  @media (min-width: 971px) {
+    div {
+      top: 0px;
+    }
+  }
+  @media (max-width: 970px) {
+    div {
+      top: -16px;
+    }
+  }
+  div {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    @media (min-width: 971px) {
+      .nav-bar-desk {
+        display: block!important;
+      }
+      .nav-bar-mobil {
+        display: none!important;
+      }
+    }
+
+    @media (max-width: 970px) {
+      .nav-bar-desk {
+        display: none!important;
+      }
+      .nav-bar-mobil {
+        display: block!important;
+      }
+    }
+  }
+}
+

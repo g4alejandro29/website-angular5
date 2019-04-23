@@ -1,0 +1,24 @@
+<br/>
+<br/>
+<div class="carousel-container">
+  <div class="carousel">
+    <div *ngFor="let item of images;let i = index">
+      <!-- data:image/png;base64,-->
+      <div class="animated fadeIn image" *ngIf="(i + 1) == keyCarousel"
+           [ngStyle]="{
+           'background': 'url(' + item['path'] + ')',
+           'background-repeat':'no-repeat'}"></div>
+    </div>
+  </div>
+  <div style="text-align: center">
+    <ul>
+      <li *ngFor="let item of images; let i = index"><label (click)="setCarousel((i+1))" [ngClass]="{'label-selected': (i + 1) == keyCarousel}">&nbsp;</label></li>
+    </ul>
+  </div>
+  <a (click)="previewImg()" class="arrow-left" style="background-repeat: no-repeat">
+    <i style="font-family: Arial!important;" class="text-light">&lt;</i>
+  </a>
+  <a (click)="nextImg()" class="arrow-right">
+    <i style="font-family: Arial;" class="text-light">&gt;</i>
+  </a>
+</div>

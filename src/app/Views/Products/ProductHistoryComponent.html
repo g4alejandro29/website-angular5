@@ -1,0 +1,13 @@
+<div>
+  <br>
+  <h1 class="h2 text-center font-weight-bold">Conoce Nuestros Productos</h1>
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let item of productCategories" class="col-xl-3 offset-xl-0 col-lg-3 offset-lg-0 col-md-4 offset-md-0 col-sm-10 offset-sm-1 col-10 offset-1">
+        <app-product-card
+          [card]="item"></app-product-card>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>

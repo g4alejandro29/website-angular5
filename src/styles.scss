@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~animate.css/animate.min.css";
+@import "~alertifyjs/build/css/alertify.css";
+@import "~alertifyjs/build/css/themes/bootstrap.css";
+@import "assets/font/OpenSans-Bold.ttf";
+@import "assets/font/OpenSans-BoldItalic.ttf";
+@import "assets/font/OpenSans-ExtraBold.ttf";
+@import "assets/font/OpenSans-Italic.ttf";
+@import "assets/font/OpenSans-Light.ttf";
+@import "assets/font/OpenSans-LightItalic.ttf";
+@import "assets/font/OpenSans-Regular.ttf";
+@import "assets/font/OpenSans-SemiBold.ttf";
+@import "assets/font/OpenSans-SemiBoldItalic.ttf";
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+}
+
+.input-invalid:focus {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid rgba(255, 0, 24, 0.6);
+}
+
+.input-invalid {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid rgba(255, 0, 24, 0.6);
+}
+
+.input-valid:focus {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid rgba(0, 255, 45, 0.6);
+}
+
+.input-valid {
+  border: 1px solid rgba(0, 255, 45, 0.6);
+}
+
+.text-invalid {
+  color: rgba(255, 0, 24, 0.6);
+  font-size: 12px;
+  font-weight: bold;
+}
+.select-input {
+  border-bottom: solid 2px #3e52b3;
+}
+.label {
+  padding-left: 12px;
+  color: #3e52b3;
+  font-size: 12px;
+}
+form {
+  //width: 100%;
+  //background: rgba(0, 0, 0, 0.5);
+  //padding:25px;
+  span {
+    position: absolute;
+    top: 3px;
+    left: 9px;
+    font-size: 20px;
+  }
+  input {
+    width: 100%;
+    height: 35px;
+  }
+
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 80px;
+    max-height: 100px;
+  }
+
+  select {
+    width: 100%;
+    height: 35px;
+  }
+  input, textarea, select {
+    padding-left: 5px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+  }
+
+
+  :-ms-input-placeholder { color: red; }
+  input:hover, textarea:hover, select:hover {
+    border-bottom: solid 2px #3e52b3;
+    transition-delay: 0.3s;
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+  }
+}

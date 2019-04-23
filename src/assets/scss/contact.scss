@@ -1,0 +1,45 @@
+agm-map {
+  height: 515px;
+}
+button {
+  background: #154360;
+  border: 4px solid #fff;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  padding: 14px 41px;
+  font-size: 24px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1);
+}
+button:hover {
+  border: 4px solid #154360;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 26px 46px;
+  margin-top: -12px;
+  margin-bottom: -12px;
+}
+button:focus{
+  outline: none;
+}
+ul {
+  list-style-type: none;
+  li {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    a {
+      color:#212529;
+      span {
+        margin-right: 10px;
+      }
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<div class="container-menu">
+  <header>
+    <nav>
+      <div class="logo-container">
+        &nbsp;
+        <a routerLink="/home" class="logo">
+          <img src="../../../assets/img/dicarsa-logo.png">
+        </a>
+      </div>
+      <div class="bottom-container">
+        <button type="button" (click)="menu()">
+          <i style="color: #fff;" class="fas fa-2x fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+</div>
+<div [ngClass]="{'show-menu': !showMenu}" class="container-option animated bounceInLeft">
+  <div class="options">
+    <ul>
+      <li routerLinkActive="active-option"
+          [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="/home" (click)="option()">Inicio</a>
+      </li>
+      <li routerLinkActive="active-option"
+          [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="/know-us" (click)="option()">
+          Conócenos
+        </a>
+      </li>
+      <li routerLinkActive="active-option"
+          [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="/products" (click)="option()">Producto</a>
+      </li>
+      <li routerLinkActive="active-option"
+          [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="/contact" (click)="option()">Contacto</a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+.chat-icon {
+  color: #B9C6CA;
+  position: fixed;
+  z-index: 21;
+  bottom: 0;
+  right: 5px;
+}
+.chat {
+  position: fixed;
+  z-index: 21;
+  margin: 0px;
+  bottom:0;
+  height: 300px;
+  width: 230px;
+  right: 5px;
+  border-radius: 5px 5px 0 0;
+  background: #B9C6CA;
+  .header{
+    background: lightblue;
+    border-radius: 5px 5px 0 0;
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 22px;
+    .left {
+      width: 50%;
+      float: left;
+    }
+    .right {
+      width: 50%;
+      float: right;
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+  .message {
+    width: 100%;
+    height: 248px;
+  }
+  .form {
+    width: 100%;
+    input {
+      width: 100%;
+      border-top: 1px solid rgba(0,0,0, 0.7);
+      border-left: none;
+      border-right: none;
+      padding-left: 2px;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+<div class="container-fluid">
+  <br/>
+  <br/>
+  <br/>
+  <br/><br/>
+  <div class="row">
+    <div class="col-12">
+      <h1 class="h3 text-center">Contacto</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-8">
+      <div class="row">
+        <div class="col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10 offset-xl-0 offset-lg-0 offset-md-1 offset-sm-1 offset-1">
+          <form (ngSubmit)="onSubmit()" #customerForm="ngForm" autocomplete="off" novalidate>
+            <app-form-input
+              [label]="'Nombres'"
+              [isType]="'text'"
+              [isRequired]="true"
+              [value]="firstName"
+              [placeHolder]="'Ingresar nombre'"
+              (input)="updateFirstName($event.target.value)"
+              [isDanger]="firstNameIsDanger()"
+              [error]="firstNameError"
+              [isSuccess]="firstNameIsSuccess()"></app-form-input>
+            <app-form-input
+              [label]="'Apellidos'"
+              [isType]="'text'"
+              [isRequired]="true"
+              [value]="lastName"
+              [placeHolder]="'Ingresar apellido'"
+              (input)="updateLastName($event.target.value)"
+              [isDanger]="lastNameIsDanger()"
+              [error]="lastNameError"
+              [isSuccess]="lastNameIsSuccess()"></app-form-input>
+            <app-form-input
+              [label]="'Correo'"
+              [isType]="'email'"
+              [isRequired]="true"
+              [value]="email"
+              [placeHolder]="'Ingresar correo electrónico'"
+              [icon]="'far fa-envelope'"
+              (input)="updateEmail($event.target.value)"
+              [isDanger]="emailIsDanger()"
+              [error]="emailError"
+              [isSuccess]="emailIsSuccess()"></app-form-input>
+            <app-form-select
+              [value]="country"
+              [list]="countries"
+              (input)="updateCountry($event.target.value)"
+              placeHolder="Selecciona país"></app-form-select>
+            <app-form-select
+              [value]="subdivision"
+              [list]="subdivisions"
+              (input)="updateSubdivision($event.target.value)"
+              placeHolder="Selecciona área"></app-form-select>
+            <app-form-input
+              [label]="'Teléfono'"
+              [isType]="'tel'"
+              [isRequired]="true"
+              [value]="phone"
+              [placeHolder]="'Ingresar teléfono'"
+              [icon]="'fas fa-mobile-alt'"
+              (input)="updatePhone($event.target.value)"></app-form-input>
+            <app-form-textarea
+              [value]="description"
+              [placeHolder]="'Ingrese descripción'"
+              (input)="updateDescription($event.target.value)"
+              [isRequired]="true"></app-form-textarea>
+            <div class="form-group row" style="padding-left: 20px">
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+        <br/>
+        <div class="col-xl-4">
+          <ul>
+            <li>
+              <a href="mailto:contacto@dicarsa.com.gt">
+                <span><i class="far fa-envelope"></i></span>
+                contacto@dicarsa.com.gt
+              </a>
+            </li>
+            <li>
+              <a>
+                <span>
+                  <i class="fa fa-phone fa-rotate-90"></i>
+                </span>
+              </a>
+              <a href="tel:23627733">
+                23627733
+              </a> -
+              <a href="tel:55573014">
+                55573014
+              </a>
+            </li>
+            <li>
+              <a>
+                <span><i class="fas fa-map-marker-alt"></i></span>
+                Ruta 2, 6-78 zona 4<br/>
+                Ciudad de Guatemala
+              </a>
+            </li>
+            <li>
+              <a>
+                <span><i class="far fa-clock"></i></span>
+                De 07:00 a 18:00 horas
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/dicarsaauto/" target="_blank">
+                <span>
+                  <i class="fab fa-facebook"></i>
+                </span>
+                /DicarsaGuatemala
+              </a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=50255573014" target="_blank">
+                <span>
+                  <i class="fab fa-whatsapp"></i>
+                  +502 55573014
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="col-xl-4">
+      <br>
+      <div style="width: 100%"><iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=Ruta%202%2C%206-78%20zona%204%2C%20Guatemala+(DICARSA)&ie=UTF8&t=&z=19&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/calcular-ruta.html">Calcular Ruta</a></iframe></div><br />
+    </div>
+  </div>
+  <br/>
+</div>

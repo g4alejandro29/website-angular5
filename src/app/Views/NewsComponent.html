@@ -1,0 +1,27 @@
+<div class="font-news">
+  <div class="container-title">
+    <div class="new-title text-center">
+      <label class="text-light">OFERTAS</label>
+    </div>
+  </div>
+  <div class="font-degrade">
+    <br/>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 col-12" *ngFor="let item of events, let i=index">
+          <app-card-new-component [card]="item" *ngIf="i<3"></app-card-new-component>
+        </div>
+        <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 col-12">
+        </div>
+        <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 col-12">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 col-12"  *ngFor="let item of events, let i=index">
+          <app-card-new-component [card]="item" *ngIf="i > 2"></app-card-new-component>
+        </div>
+      </div>
+      <br/>
+    </div>
+  </div>
+</div>
