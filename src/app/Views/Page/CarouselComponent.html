@@ -7,12 +7,25 @@
       <div class="animated fadeIn image" *ngIf="(i + 1) == keyCarousel"
            [ngStyle]="{
            'background': 'url(' + item['path'] + ')',
-           'background-repeat':'no-repeat'}"></div>
+           'background-repeat':'no-repeat'}">
+        <div class="container">
+          <div class="row">
+            <div style="position: relative;" class="col-lg-6 col-md-12 col-sm-12">
+              <label class="text-icon" style="position: absolute;">{{item.text}}</label>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12" style="position: relative;align-items: center;vertical-align: middle; align-content: center;">
+              <img class="icon" [src]="item['icon']"/>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div style="text-align: center">
     <ul>
-      <li *ngFor="let item of images; let i = index"><label (click)="setCarousel((i+1))" [ngClass]="{'label-selected': (i + 1) == keyCarousel}">&nbsp;</label></li>
+      <li *ngFor="let item of images; let i = index"><label (click)="setCarousel((i+1))"
+                                                            [ngClass]="{'label-selected': (i + 1) == keyCarousel}">&nbsp;</label>
+      </li>
     </ul>
   </div>
   <a (click)="previewImg()" class="arrow-left" style="background-repeat: no-repeat">

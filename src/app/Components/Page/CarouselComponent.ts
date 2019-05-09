@@ -19,10 +19,32 @@ export class CarouselComponent implements OnInit {
   public carouselData: Array<object> = [];
   public events: Array<object> = [];
   public images: Array<object> = [
-    {path: '../../../assets/img/carousel1.jpg'},
-    {path: '../../../assets/img/carousel2.jpg'},
-    {path: '../../../assets/img/carousel3.jpg'},
-    {path: '../../../assets/img/carousel4.jpg'}
+    {
+      path: '../../../assets/img/fondo1.png',
+      icon: '../../../assets/img/icon5.png',
+      text: 'LUBRICANTES EN DIFERENTES MARCAS'
+    },
+    {
+      path: '../../../assets/img/fondo2.png',
+      icon: '../../../assets/img/icon1.png',
+      text: 'REPUESTOS'
+    },
+    {
+      path: '../../../assets/img/fondo3.png',
+      icon: '../../../assets/img/icon3.png',
+      text: 'FILTRO DE ACEITE AIRE, GASOLINA, CAJA',
+      note: 'Para todo tipo de vehículo y modelos desde 1960'
+    },
+    {
+      path: '../../../assets/img/fondo4.png',
+      icon: '../../../assets/img/icon4.png',
+      text: 'HAZ TUS PEDIDOS POR WHATZAPP AL 5557-3014'
+    },
+    {
+      path: '../../../assets/img/fondo5.png',
+      icon: '../../../assets/img/icon-dicarsa.png',
+      text: 'SOMOS LO QUE TU VEHÍCULO NECESITA'
+    }
   ];
   public interval: any = null;
 
@@ -49,7 +71,7 @@ export class CarouselComponent implements OnInit {
         return this.getCarousel();
       })
       .then(() => {
-        const self = this
+        const self = this;
         setTimeout(function () {
           self.spinnerService.hide();
         }, 1000);

@@ -1,3 +1,13 @@
+.image {
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+}
+.icon{
+  width: 400px;
+  position: absolute;
+  top: 200px;
+}
 .carousel-container {
   height: auto;
   position: relative;
@@ -69,50 +79,56 @@
     }
   }
 }
-
-@media (min-width: 1320px) {
-  .image {
-    width: 100%;
-    max-width: 100%;
-    height: 700px;
-    background-position: bottom center!important;
-    background-size: auto 700px!important;
+@media(min-width: 992px) {
+  .text-icon {
+    top: 300px;
+    font-size: 38px;
+    color:#fff;
   }
 }
-@media (max-width: 1319px) and (min-width: 1020px) {
-  .image {
-    width: 100%;
-    max-width: 100%;
-    height: 600px;
-    background-position: bottom center!important;
-    background-size: auto 600px!important;
+@media(max-width: 991px) and (min-width: 702px) {
+  .text-icon {
+    top: 40px;
+    font-size: 38px;
+    color:#fff;
+  }
+  .icon{
+    width: 400px;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    padding: 0;
+    margin:0;
   }
 }
-@media (max-width: 1019px) and (min-width: 920px) {
-  .image {
-    width: 100%;
-    max-width: 100%;
-    height: 500px;
-    background-position: bottom center!important;
-    background-size: auto 500px!important;
+@media(max-width: 701px) and (min-width: 502px) {
+  .text-icon {
+    top: 40px;
+    font-size: 38px;
+    color:#fff;
+  }
+  .icon{
+    width: 400px;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    padding: 0;
+    margin:0;
   }
 }
-@media (max-width: 919px) and (min-width: 771px) {
-  .image {
-    width: 100%;
-    max-width: 100%;
-    height: 500px;
-    background-position: bottom center!important;
-    background-size: auto 500px!important;
+@media (max-width: 501px) {
+  .text-icon {
+    top: 40px;
+    font-size: 38px;
+    color:#fff;
   }
-}
-@media (max-width: 771px) {
-  .image {
-    width: 100%;
-    max-width: 100%;
-    height: 500px;
-    background-position: bottom center!important;
-    background-size: auto 500px!important;
+  .icon{
+    width: 300px;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    padding: 0;
+    margin:0;
   }
   .carousel-container {
     .arrow-left {
