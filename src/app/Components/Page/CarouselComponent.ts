@@ -33,7 +33,12 @@ export class CarouselComponent implements OnInit {
       path: '../../../assets/img/fondo3.png',
       icon: '../../../assets/img/icon3.png',
       text: 'FILTRO DE ACEITE AIRE, GASOLINA, CAJA',
-      note: 'Para todo tipo de vehículo y modelos desde 1960'
+      note: {
+        text: 'Para todo tipo de vehículo y modelos desde 1960',
+        style: {
+          color: 'lightblue'
+        }
+      }
     },
     {
       path: '../../../assets/img/fondo4.png',
@@ -47,6 +52,12 @@ export class CarouselComponent implements OnInit {
     }
   ];
   public interval: any = null;
+
+  getNoteText(item = {}) {
+    const Note = item['note'] ? item['note'] : null;
+    const text = Note ? Note['text'] : null;
+    return text;
+  }
 
   constructor(
     private spinnerService: NgxSpinnerService,
