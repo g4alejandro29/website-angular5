@@ -11,12 +11,12 @@
         <div class="container">
           <div class="row">
             <div style="position: relative;" class="col-lg-6 col-md-12 col-sm-12">
-              <label class="text-icon" style="position: absolute;">{{item.text}}</label>
-              <label class="text-note text-show" style="position: absolute;">{{this.getNoteText(item)}}</label>
+              <label class="text-icon" [ngStyle]="getStyle(item)" style="text-shadow: 0px 5px 5px #000;font-weight: bold;position: absolute;font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;" [innerHTML]="item.text"></label>
+              <label class="text-note text-show" style="position: absolute;font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;" [innerHTML]="this.getNoteText(item)"></label>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12" style="position: relative;align-items: center;vertical-align: middle; align-content: center;">
               <img class="icon" [src]="item['icon']"/>
-              <label class="text-note text-hide text-bottom" style="position: absolute; text-align: justify-all;">{{this.getNoteText(item)}}</label>
+              <label class="text-note text-hide text-bottom" style="position: absolute; text-align: justify-all;font-family: century;">{{this.getNoteText(item)}}</label>
             </div>
           </div>
         </div>

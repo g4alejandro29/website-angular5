@@ -3,6 +3,7 @@ import {CarouselServices} from '../../Services/CarouselServices';
 import {EventServices} from '../../Services/EventServices';
 import {NgxSpinnerService} from 'ngx-spinner';
 import * as Config from '../../Config/Config.js';
+import {DomSanitizer} from '@angular/platform-browser';
 
 declare var jQuery: any;
 
@@ -22,19 +23,34 @@ export class CarouselComponent implements OnInit {
     {
       path: '../../../assets/img/fondo1.png',
       icon: '../../../assets/img/icon5.png',
-      text: 'LUBRICANTES EN DIFERENTES MARCAS'
+      text: 'LUBRICANTES EN DIFERENTES MARCAS',
+      style: {
+        'border-bottom': 'solid',
+        'width': '80%',
+        'font-size': '28px'
+      }
     },
     {
       path: '../../../assets/img/fondo2.png',
       icon: '../../../assets/img/icon1.png',
-      text: 'REPUESTOS'
+      text: 'REPUESTOS',
+      style: {
+        'border-top': 'solid',
+        'border-bottom': 'solid'
+      }
     },
     {
       path: '../../../assets/img/fondo3.png',
       icon: '../../../assets/img/icon3.png',
       text: 'FILTRO DE ACEITE AIRE, GASOLINA, CAJA',
+      style: {
+        'border-bottom': 'solid',
+        'width': '80%',
+        'font-size': '28px'
+      },
       note: {
-        text: 'Para todo tipo de vehículo y modelos desde 1960',
+        text: this.sanitized.bypassSecurityTrustHtml(
+          '<label style="color:#014575;">Para todo tipo de vehículo y modelos desde 1960</label>'),
         style: {
           color: 'lightblue'
         }
@@ -43,12 +59,29 @@ export class CarouselComponent implements OnInit {
     {
       path: '../../../assets/img/fondo4.png',
       icon: '../../../assets/img/icon4.png',
-      text: 'HAZ TUS PEDIDOS POR WHATZAPP AL 5557-3014'
+      text: this.sanitized.bypassSecurityTrustHtml(
+        'HAZ TUS PEDIDOS POR WHATSAPP </br>' +
+        '<label style="background: #fff;color:#016908;text-shadow: none!important;font-weight: bold;">AL 5557-3014</label>'),
+      style: {
+        'width': '80%',
+        'font-size': '28px'
+      },
+      style2: {
+        'width': '80%',
+        'background': '#fff',
+        'font-size': '28px'
+      }
     },
     {
       path: '../../../assets/img/fondo5.png',
       icon: '../../../assets/img/icon-dicarsa.png',
-      text: 'SOMOS LO QUE TU VEHÍCULO NECESITA'
+      text: this.sanitized.bypassSecurityTrustHtml(
+        'TENEMOS TODO LO QUE TU</br>' +
+        '<label style="background: #fff;color:#01183f;font-weight: bold;text-shadow: none!important;"> VEHICULO NECESITA</label>'),
+      style: {
+        'width': '80%',
+        'font-size': '28px'
+      }
     }
   ];
   public interval: any = null;
@@ -62,8 +95,15 @@ export class CarouselComponent implements OnInit {
   constructor(
     private spinnerService: NgxSpinnerService,
     private _carousel: CarouselServices,
-    private _event: EventServices
+    private _event: EventServices,
+    private sanitized: DomSanitizer
   ) {
+  }
+
+  getStyle(item) {
+    const data = item ? item : null;
+    const style = data.style ? data.style : null;
+    return style;
   }
 
   ngOnInit() {
