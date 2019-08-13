@@ -8,11 +8,6 @@
   display: none;
 }
 
-.icon {
-  width: 480px;
-  position: absolute;
-  top: 120px;
-}
 
 .carousel-container {
   height: auto;
@@ -96,8 +91,7 @@
     }
   }
 }
-
-@media(min-width: 992px) {
+@media(min-width: 1500px) {
   .text-icon {
     top: 300px;
     font-size: 38px;
@@ -107,6 +101,32 @@
     top: 415px;
     font-size: 18px;
     color: #fff;
+  }
+  .icon {
+    width: 500px;
+    position: absolute;
+    top: 110px;
+  }
+}
+
+@media(max-width: 1499px) and (min-width: 992px) {
+  .text-icon {
+    top: 300px;
+    font-size: 38px;
+    color: #fff;
+  }
+  .text-note {
+    top: 415px;
+    font-size: 18px;
+    color: #fff;
+  }
+  .icon {
+    width: 400px;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    padding: 0;
+    margin: 0;
   }
 }
 
